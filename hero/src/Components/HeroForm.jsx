@@ -12,19 +12,27 @@ function HeroForm() {
         }
     )
     const [data,setData]=useState([])
+    const [max,setMax]=useState(0);
     const handleFormSubmit=(e)=>
     {
         e.preventDefault();   
         setData([...data,inputdata]);     
     }
-    // const mostPowerfulHero=()=>
-    // {
-    //     const updateArray=data.map((e,i)=>
-    //     {
-            
-    //     }
-    //     )
-    // }
+
+    const showMax=()=>
+    {
+        let maxpower=0;
+        for(var i=0;i<data.length;i++)
+        {
+           maxpower=Math.max(data[i].level,maxpower);
+        }
+        setMax(maxpower);        
+    }
+
+    const showAll=()=>
+    {
+        setMax(0);
+    }
   return (
     <div>
         <form onSubmit={handleFormSubmit}>
@@ -33,10 +41,10 @@ function HeroForm() {
             <input type="number" name='weight' placeholder='Enter Weight in kgs' onChange={(e)=>setInputdata({...inputdata,[e.target.name]:e.target.value})}/> <br />
             <input type="number" name='level' placeholder='Power Level' onChange={(e)=>setInputdata({...inputdata,[e.target.name]:e.target.value})}/> <br />
             <input type="submit" placeholder='Submit' disabled={inputdata.name && inputdata.height && inputdata.weight && inputdata.level ? false : true}/> <br />
-            <input type="button" value="Most Powerful SuperHero" hidden={data.length<= 1 ? true : false} onClick/>
-            <input type="button" value="Show All" hidden={data.length<= 1 ? true : false} onClick/>
+            <input type="button" value="Most Powerful SuperHero" hidden={data.length<= 1 ? true : false} onClick={showMax}/>
+            <input type="button" value="Show All" hidden={data.length<= 1 ? true : false} onClick={showAll}/>
         </form>
-        <HeroCard arr={data}/>
+        <HeroCard arr={data} max={max}/>
     </div>
   )
 }

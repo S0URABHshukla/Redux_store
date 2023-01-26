@@ -1,9 +1,9 @@
 import React from 'react'
 
-function HeroCard({arr}) {
+function HeroCard({arr,max}) {
   return (
     <div>
-      {arr.map((e,i)=>
+      {arr.filter((e)=>e.level>=max).map((e,i)=>
       {
         return <div key={i} style={{border:"1px solid purple",padding:"20px"}}>
           <p>Name: <h4 style={{color:"red"}}>{e.name}</h4></p>
