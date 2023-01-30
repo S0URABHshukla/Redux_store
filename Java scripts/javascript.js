@@ -54,3 +54,10 @@
 // {
 //     console.log("swim")
 // }
+
+// console.log(null || 4 || 2&&3 );
+//sourav = true;
+
+// console.log(null || 2||3 || 4);
+
+// console.log(2&&3 &&0);
