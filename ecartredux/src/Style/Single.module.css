@@ -1,0 +1,21 @@
+#grid
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: auto;
+}
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+    #grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+  }
+  
+  /* If the screen size is 600px or less, set the font-size of <div> to 30px */
+  @media only screen and (min-width: 0px) and (max-width: 599px) {
+    #grid{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+  }
