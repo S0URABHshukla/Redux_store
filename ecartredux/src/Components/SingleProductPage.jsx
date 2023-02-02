@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react';
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import Cart from './Cart';
 
 function SingleProductPage() {
   const {id}=useParams();
@@ -24,7 +25,10 @@ function SingleProductPage() {
                 <p>Brand : {data?.brand}</p>  
                  <p>Title : {data?.title}</p>  
                  <p>Category : {data?.category}</p>  
-                 <p>Price : {data?.price}</p>  
+                 <p>Price : {data?.price}</p>
+                 <Link to={'/cart'}>  
+                 <button style={{backgroundColor:"crimson"}}>Add To cart</button>
+                 </Link>
                 </div> 
     </div>
   )

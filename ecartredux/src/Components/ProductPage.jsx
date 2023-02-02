@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Loader from './Loader'
+import styleproduct from '../Style/Productpage.module.css'
 
 function ProductPage() {
     const [order,setOrder]=useState("asc");
@@ -27,11 +28,11 @@ function ProductPage() {
   return (
     <>
     <div style={{display:"flex",justifyContent:"center",padding:"0 50px"}}>
-        <select id="" onChange={(e)=>setOrder(e.target.value)}>
+        <select id={styleproduct.order} onChange={(e)=>setOrder(e.target.value)}>
             <option value="asc">Low to High</option>
             <option value="desc">High to Low</option>
         </select>
-        <select  id="" onChange={(e)=>setFilter(e.target.value)}>
+        <select  id={styleproduct.filter} onChange={(e)=>setFilter(e.target.value)}>
             <option value="all">All</option>
             <option value="men">Men</option>
             <option value="women">Women</option>
