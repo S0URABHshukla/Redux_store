@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Loader from './Loader'
 import styleproduct from '../Style/Productpage.module.css'
+import {useDispatch} from 'react-redux'
 
 function ProductPage() {
     const [order,setOrder]=useState("asc");
@@ -13,6 +14,7 @@ function ProductPage() {
     const [totalpage,setTotalpage]=useState(1);
     const [data,setData]=useState([])
     const [loader,setLoader]=useState(true);
+    // const dispatch=useDispatch();
     const fetchData=async ()=>
     {
         let res=await fetch(`https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products?page=${page}&limit=12&sort=price&order=${order}&filter=${filter}`);
