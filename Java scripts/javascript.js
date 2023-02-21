@@ -82,15 +82,24 @@
 // Output: false
 // Explanation: You will always arrive at index 3 no matter what. Its maximu
 
-let arr =['a','b','b','c','c','c'];
-const unique=(arr)=>
+// let arr =['a','b','b','c','c','c'];
+
+// const findcount=(arr)=>
+// {
+//     let count={};
+//     arr.forEach((e)=>
+//     {
+//         count[e]=(count[e] || 0) + 1;
+//     })
+//     return count;
+// }
+// const res=findcount(arr);
+// console.log(res)
+
+for(var i=0;i<10;i++)
 {
-    let counter={};
-    arr.forEach((e)=>
+    setTimeout(()=>
     {
-        counter[e]=(counter[e] || 0)+1;
-    })
-    return counter;
+        console.log(i)
+    },1000)
 }
-const res=unique(arr);
-console.log(res)
