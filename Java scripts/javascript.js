@@ -113,22 +113,43 @@
 // }
 // console.log(product(4)(5));
 
-function chips() {
-    console.log('sync: chips');
-  }
+// function chips() {
+//     console.log('sync: chips'); 
+//   }  
+//   function pizza() {
+//     setTimeout(()=>{
+//       console.log('async: pizza');
+//     },0);
+//   }
   
-  function pizza() {
-    setTimeout(()=>{
-      console.log('async: pizza');
-    },0);
-  }
+//   function main() {
+//     chips();
+//     pizza();
+//     chips();
+//     chips();
+//     chips();
+//   }  
+//   main();
+
+// function sayGoodbye() {
+//     console.log("Good bye! ", this);
+//   }
   
-  function main() {
-    chips();
-    pizza();
-    chips();
-    chips();
-    chips();
-  }
+//   function sayHello() {
+//     console.log("Helloo! ", this);
+//     sayGoodbye();
+//   }
   
-  main();
+//   sayHello();
+
+
+// let arr=['a','b','c','d','e','f'];
+// let s=arr.indexOf('c');
+// let e=arr.indexOf('e');
+// let end=e-s+1 ;
+
+// let newArr=arr.splice(s,end);
+// let updateArr=newArr.concat(arr)
+// console.log(updateArr);
+
+
