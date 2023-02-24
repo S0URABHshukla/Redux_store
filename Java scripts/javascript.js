@@ -152,4 +152,33 @@
 // let updateArr=newArr.concat(arr)
 // console.log(updateArr);
 
+let developers_array = [
+      {
+        first: "John",
+        last: "Doe",
+        dept: "FE",
+        commits: 10
+      },
+      {
+        first: "Jane",
+        last: "Doe",
+        dept: "BE",
+        commits: 15
+      },
+      {
+        first: "James",
+        last: "bond",
+        dept: "BE",
+        commits: 8
+      }
+    ];
+    // {
+    //   BE: ["Jane", "James"]
+    //   FE: ["John"]
+    // }
+  let obj =  {
+        BE : developers_array.filter((ele)=> ele.dept == "BE").map((ele)=>ele.first),
+        FE : developers_array.filter((ele)=> ele.dept == "FE").map((ele)=>ele.first)
+    }
+console.log(obj);
 
