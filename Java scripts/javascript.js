@@ -96,10 +96,39 @@
 // const res=findcount(arr);
 // console.log(res)
 
-for(var i=0;i<10;i++)
-{
-    setTimeout(()=>
-    {
-        console.log(i)
-    },1000)
-}
+// for(var i=0;i<10;i++)
+// {
+//     setTimeout(()=>
+//     {
+//         console.log(i)
+//     },1000)
+// }
+// currying
+// function product(x)
+// {
+//     return function(y)
+//     {
+//         return x*y;
+//     }
+// }
+// console.log(product(4)(5));
+
+function chips() {
+    console.log('sync: chips');
+  }
+  
+  function pizza() {
+    setTimeout(()=>{
+      console.log('async: pizza');
+    },0);
+  }
+  
+  function main() {
+    chips();
+    pizza();
+    chips();
+    chips();
+    chips();
+  }
+  
+  main();
