@@ -314,6 +314,30 @@
 // console.log(person)
 // console.log(Object.keys(person))
 
+// const arr=[1,2,3,4,5];
+
+// const binary=(x)=>
+// {
+//     return x.toString(2);
+// }
+// const result=arr.map(binary);
+// console.log(result)
+
+// arr.forEach((e,i)=>
+// {
+//     arr[i]=e.toString(2);
+// })
+// console.log(arr);
+
+// const arr=[1,2,3,4,5];
+
+// const result=arr.reduce((acc,curr)=>
+// {
+//     return acc=acc+curr;
+// },0);
+// console.log(result)
+// console.log(arr)
+
 
 
 
