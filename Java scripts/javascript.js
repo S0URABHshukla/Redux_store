@@ -152,33 +152,186 @@
 // let updateArr=newArr.concat(arr)
 // console.log(updateArr);
 
-let developers_array = [
-      {
-        first: "John",
-        last: "Doe",
-        dept: "FE",
-        commits: 10
-      },
-      {
-        first: "Jane",
-        last: "Doe",
-        dept: "BE",
-        commits: 15
-      },
-      {
-        first: "James",
-        last: "bond",
-        dept: "BE",
-        commits: 8
-      }
-    ];
+// let developers_array = [
+//       {
+//         first: "John",
+//         last: "Doe",
+//         dept: "FE",
+//         commits: 10
+//       },
+//       {
+//         first: "Jane",
+//         last: "Doe",
+//         dept: "BE",
+//         commits: 15
+//       },
+//       {
+//         first: "James",
+//         last: "bond",
+//         dept: "BE",
+//         commits: 8
+//       }
+//     ];
     // {
     //   BE: ["Jane", "James"]
     //   FE: ["John"]
     // }
-  let obj =  {
-        BE : developers_array.filter((ele)=> ele.dept == "BE").map((ele)=>ele.first),
-        FE : developers_array.filter((ele)=> ele.dept == "FE").map((ele)=>ele.first)
-    }
-console.log(obj);
+//   let obj =  {
+//         BE : developers_array.filter((ele)=> ele.dept == "BE").map((ele)=>ele.first),
+//         FE : developers_array.filter((ele)=> ele.dept == "FE").map((ele)=>ele.first)
+//     }
+// console.log(obj);
+
+// let prateekMarksData = {
+//   name: "Prateek",
+//   subject1: "Javascript",
+//   subject2: "HTML",
+//   subject3: "CSS",
+//   subject4: null,
+//   subject5: null,
+//   marks1: 90, 
+//   marks2: 81,
+//   marks3: 80,
+//   marks4: null,
+//   marks5: null,
+// }
+
+// let nrupulMarksData = {
+//   name: "Nrupul",
+//   subject1: "Java",
+//   subject2: "Pyton",
+//   subject3: null,
+//   subject4: null,
+//   subject5: null,
+//   marks1: 95, 
+//   marks2: 85,
+//   marks3: null,
+//   marks4: null,
+//   marks5: null,
+// }
+
+// let allStudentsMarksData = [prateekMarksData, nrupulMarksData];
+
+// let massagedData = allStudentsMarksData.reduce((acc, item)=>{
+//   let object = {};
+
+//   object.name = item.name;
+//   let arr = [];
+  
+//   for(let i = 1; i < 6; i++) {
+//       if(item[`subject${i}`]){
+//         object.marks = object.marks ? [...object.marks, {  subject: item[`subject${i}`], score : item[`marks${i}`]   } ] : [ { subject: item[`subject${i}`], score : item[`marks${i}`]   }  ];
+
+//         console.log({ subject: item[`subject${i}`], score : item[`marks${i}`]   })
+        
+//       }
+//   }
+
+//   acc.push(object)
+  
+//   return acc
+// },[])
+
+
+
+
+// console.log(massagedData);
+
+// const obj1={
+//     name:"sourabh",
+//     sname:"shukla"
+// }
+// const obj2={
+//     name:"nitin",
+//     sname:"deswal"
+// }
+
+// console.log({...obj1,...obj2})
+
+// const arr1=[1,2,3,4,5];
+// const arr2=[3,4,5,6,7];
+
+// console.log([...arr1,...arr2]);
+
+// const obj1={
+//     name:"sourabh",
+//     sname:"shukla"
+// }
+
+// Object.seal(obj1);
+// obj1.name="nitin"
+
+// console.log(obj1)
+
+// for(let i=0;i<5;i++) 
+// {
+//     setTimeout(()=>
+//     {
+//         console.log(i);
+//     },0)
+// }
+// let obj={
+//     name:"nitin",
+//     sname:"deswal"
+// }
+// let sname='shukla';
+// console.log(obj["sname"], obj.sname, obj[sname])
+
+// "use strict"
+// var x=100;
+
+// function test()
+// {
+//     var x=i=10;
+// }
+// test()
+// console.log(x,i)
+
+// const result=[[0,1],[2,3]].reduce((acc,cur)=>
+// {
+//     return acc.concat(cur);
+// },[1,2]);
+// console.log(result);
+
+// let set=new Set();
+// set.add(1);
+// set.add('anup');
+// set.add({name:"anup"});
+
+// for(let item of set)
+// {
+//     console.log(item+2);
+// }
+
+// const user={name:"anup", age:21};
+// const obj={admin:true,...user}
+
+// console.log(obj)
+
+// const person={name:"anup"};
+
+// Object.defineProperty(person,'age',{value:21})
+// console.log(person)
+// console.log(Object.keys(person))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
