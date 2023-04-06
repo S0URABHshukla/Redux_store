@@ -101,15 +101,30 @@
 // console.log(userDetails.call(user,24));
 // console.log(userDetails.bind(user,24));
 
-const age=10;
-const obj=
+// const age=10;
+// const person=
+// {
+//     name:"sourabh",
+//     age:"24",
+//     getAge()
+//     {
+//         return this.age;
+//     },
+// };
+// const person2= { age : 26};
+// console.log(person.getAge.call(person2));
+
+var status="sourabh";
+setTimeout(()=>
 {
-    name:"sourabh",
-    age:"24",
-    getAge()
-    {
-        return this.age;
-    },
-};
-const person2= { age : 26};
-person2.getAge.call(person2);
+    const status="kumar";
+    const data={
+        status:"sourabh kumar shukla",
+        getStatus()
+        {
+            return this.status;
+        },
+    };
+    console.log(data.getStatus());
+    console.log(data.getStatus.call(this));
+},0);
