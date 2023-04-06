@@ -129,19 +129,49 @@
 //     console.log(data.getStatus.call(this));
 // },0);
 
-const animals=[
-    {species:"Lion" , name:"King"},
-    {species:"Whale" , name:"Queen"},
-];
+// const animals=[
+//     {species:"Lion" , name:"King"},
+//     {species:"Whale" , name:"Queen"},
+// ];
 
-function printAnimals(i)
+// function printAnimals(i)
+// {
+//     this.print=function()
+//     {
+//         console.log(`# ${i} ${this.species} : ${this.name}`);
+//     };
+//     this.print();
+// }
+// for (let i = 0; i < animals.length; i++) {
+//     printAnimals.call(animals[i],i);    
+// }
+//find max
+// const array=[1,2,3,4,5];
+// console.log(Math.max.apply(null,array));
+
+// ----------------------------------------------------------------------
+
+//pollyfill for call method
+
+const car=
 {
-    this.print=function()
+    color:"grey",
+    company:"Nexa",
+};
+
+function purchaseCar(currency,price)
+{
+    console.log(`i have purchased ${this.color} - ${this.company} car for ${currency} at ${price}`);
+}
+// purchaseCar.call(car,"dollar","5cr");
+
+Function.prototype.mycall=function (context={},...args)
+{
+    if(this !== "function")
     {
-        console.log(`# ${i} ${this.species} : ${this.name}`);
-    };
-    this.print();
+        throw new Error("this is not function")
+    }
+    context.fn=this;
+    context.fn(...args);
 }
-for (let i = 0; i < animals.length; i++) {
-    printAnimals.call(animals[i],i);    
-}
+purchaseCar.call(car,"dollar","5cr");
