@@ -114,17 +114,34 @@
 // const person2= { age : 26};
 // console.log(person.getAge.call(person2));
 
-var status="sourabh";
-setTimeout(()=>
+// var status="sourabh";
+// setTimeout(()=>
+// {
+//     const status="kumar";
+//     const data={
+//         status:"sourabh kumar shukla",
+//         getStatus()
+//         {
+//             return this.status;
+//         },
+//     };
+//     console.log(data.getStatus());
+//     console.log(data.getStatus.call(this));
+// },0);
+
+const animals=[
+    {species:"Lion" , name:"King"},
+    {species:"Whale" , name:"Queen"},
+];
+
+function printAnimals(i)
 {
-    const status="kumar";
-    const data={
-        status:"sourabh kumar shukla",
-        getStatus()
-        {
-            return this.status;
-        },
+    this.print=function()
+    {
+        console.log(`# ${i} ${this.species} : ${this.name}`);
     };
-    console.log(data.getStatus());
-    console.log(data.getStatus.call(this));
-},0);
+    this.print();
+}
+for (let i = 0; i < animals.length; i++) {
+    printAnimals.call(animals[i],i);    
+}
