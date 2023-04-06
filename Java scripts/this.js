@@ -167,7 +167,7 @@
 
 // Function.prototype.mycall=function (context={},...args)
 // {
-//     if(this !== "function")
+//     if(typeof this !== "function")
 //     {
 //         throw new Error("this is not function")
 //     }
@@ -180,29 +180,29 @@
 
 //pollyfill for apply method
 
-const car=
-{
-    color:"grey",
-    company:"Nexa",
-};
+// const car=
+// {
+//     color:"grey",
+//     company:"Nexa",
+// };
 
-function purchaseCar(currency,price)
-{
-    console.log(`i have purchased ${this.color} - ${this.company} car for ${currency} at ${price}`);
-}
-// purchaseCar.apply(car,["dollar","5cr"]);
+// function purchaseCar(currency,price)
+// {
+//     console.log(`i have purchased ${this.color} - ${this.company} car for ${currency} at ${price}`);
+// }
+// // purchaseCar.apply(car,["dollar","5cr"]);
 
-Function.prototype.myApply=function (context={},args=[])
-{
-    if(this !== "function")
-    {
-        throw new Error("this is not function")
-    }
-    if(!Array.isArray(args))
-    {
-        throw new Error("this is not in array")
-    }
-    context.fn=this;
-    context.fn(...args);
-}
-purchaseCar.myApply(car,["dollar","5cr"]);
+// Function.prototype.myApply=function (context={},args=[])
+// {
+//     if(typeof this !== "function")
+//     {
+//         throw new Error("this is not function")
+//     }
+//     if(!Array.isArray(args))
+//     {
+//         throw new Error("this is not in array")
+//     }
+//     context.fn=this;
+//     context.fn(...args);
+// }
+// purchaseCar.myApply(car,["dollar","5cr"]);
