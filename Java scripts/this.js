@@ -101,3 +101,15 @@
 // console.log(userDetails.call(user,24));
 // console.log(userDetails.bind(user,24));
 
+const age=10;
+const obj=
+{
+    name:"sourabh",
+    age:"24",
+    getAge()
+    {
+        return this.age;
+    },
+};
+const person2= { age : 26};
+person2.getAge.call(person2);
