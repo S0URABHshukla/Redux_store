@@ -153,6 +153,33 @@
 
 //pollyfill for call method
 
+// const car=
+// {
+//     color:"grey",
+//     company:"Nexa",
+// };
+
+// function purchaseCar(currency,price)
+// {
+//     console.log(`i have purchased ${this.color} - ${this.company} car for ${currency} at ${price}`);
+// }
+// // purchaseCar.call(car,"dollar","5cr");
+
+// Function.prototype.mycall=function (context={},...args)
+// {
+//     if(this !== "function")
+//     {
+//         throw new Error("this is not function")
+//     }
+//     context.fn=this;
+//     context.fn(...args);
+// }
+// purchaseCar.call(car,"dollar","5cr");
+
+// ----------------------------------------------------------------------
+
+//pollyfill for apply method
+
 const car=
 {
     color:"grey",
@@ -163,15 +190,19 @@ function purchaseCar(currency,price)
 {
     console.log(`i have purchased ${this.color} - ${this.company} car for ${currency} at ${price}`);
 }
-// purchaseCar.call(car,"dollar","5cr");
+// purchaseCar.apply(car,["dollar","5cr"]);
 
-Function.prototype.mycall=function (context={},...args)
+Function.prototype.myApply=function (context={},args=[])
 {
     if(this !== "function")
     {
         throw new Error("this is not function")
     }
+    if(!Array.isArray(args))
+    {
+        throw new Error("this is not in array")
+    }
     context.fn=this;
     context.fn(...args);
 }
-purchaseCar.call(car,"dollar","5cr");
+purchaseCar.myApply(car,["dollar","5cr"]);
