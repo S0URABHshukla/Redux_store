@@ -338,6 +338,26 @@
 // console.log(result)
 // console.log(arr)
 
+// ----------------------------------------------------------------------
+
+//return only names of students who scored more than 60
+
+// let students = [
+//     { name:"piyush" , rollnumber:01 , marks : 80},
+//     { name:"jenny" , rollnumber:02 , marks : 69},
+//     { name:"kaushal" , rollnumber:03 , marks : 35},
+//     { name:"dilpreet" , rollnumber:04 , marks : 55},
+// ];
+// const names=students.filter((e,i,arr)=>
+// {
+//     return e.marks > 60;
+// }).
+// map((e)=>
+// {
+//     return e.name;
+// });
+// console.log(names);
+
 
 
 

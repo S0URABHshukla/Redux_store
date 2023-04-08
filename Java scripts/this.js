@@ -181,17 +181,15 @@
 //pollyfill for apply method
 
 // const car=
-// {
+// {    
 //     color:"grey",
 //     company:"Nexa",
 // };
-
 // function purchaseCar(currency,price)
 // {
 //     console.log(`i have purchased ${this.color} - ${this.company} car for ${currency} at ${price}`);
 // }
 // // purchaseCar.apply(car,["dollar","5cr"]);
-
 // Function.prototype.myApply=function (context={},args=[])
 // {
 //     if(typeof this !== "function")
@@ -202,7 +200,66 @@
 //     {
 //         throw new Error("this is not in array")
 //     }
-//     context.fn=this;
+//     context.fn=this; 
 //     context.fn(...args);
 // }
 // purchaseCar.myApply(car,["dollar","5cr"]);
+
+// ----------------------------------------------------------------------
+
+//polyfill for map
+// Array.prototype.myMap=function(cb)
+// {
+//     let temp=[];
+//     for (let i = 0; i < this.length; i++) {
+//         temp.push(cb(this[i],i,this));        
+//     }
+//     return temp;
+// }
+// const nums=[1,2,3,4,5,6];
+// const results=nums.myMap((e,i,arr)=>
+// {
+//     return e*2;
+// });
+// console.log(results);
+
+// ----------------------------------------------------------------------
+
+//polyfill for filter
+// Array.prototype.myFilter=function(cb)
+// {
+//     let temp=[];
+//     for (let i = 0; i < this.length; i++) {
+//         if(cb(this[i],i,this)) temp.push(this[i]);        
+//     }
+//     return temp;
+// }
+// const nums=[1,2,3,4,5,6];
+// const results=nums.myFilter((e,i,arr)=>
+// {
+//     return e>2;
+// });
+// console.log(results);
+
+// ----------------------------------------------------------------------
+
+//polyfill for reduce
+// Array.prototype.myReduce=function(cb,initialvalue)
+// {
+//     var accumulator=initialvalue;
+//     for (let i = 0; i < this.length; i++) {
+//         accumulator=accumulator ? cb(accumulator,this[i],i,this) : this[i];      
+//     }
+//     return accumulator;
+// }
+// const nums=[1,2,3,4,5,6];
+// const results=nums.myReduce((acc,cur,i,arr)=>
+// {
+//     return acc=acc+cur;
+// });
+// console.log(results);
+
+// ----------------------------------------------------------------------
+
+
+
