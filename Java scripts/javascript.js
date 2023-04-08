@@ -363,30 +363,30 @@
 // return Total marks for students with marks greater than 60 after 20 marks
 //        have been added to those who scored less than 60.
 
-let students = [
-    { name:"piyush" , rollnumber:01 , marks : 80},
-    { name:"jenny" , rollnumber:02 , marks : 69},
-    { name:"kaushal" , rollnumber:03 , marks : 35},
-    { name:"dilpreet" , rollnumber:04 , marks : 55},
-];
-const names=students.map((e,i,arr)=>
-{
-    if(e.marks < 60)
-    {
-        e.marks+=20;
-    }
-    return e.marks;
-})
-.filter((e)=>
-{
-    return e > 60;
-})
-.
-reduce((acc,cur)=>
-{
-    return acc+=cur;
-},0);
-console.log(names);
+// let students = [
+//     { name:"piyush" , rollnumber:01 , marks : 80},
+//     { name:"jenny" , rollnumber:02 , marks : 69},
+//     { name:"kaushal" , rollnumber:03 , marks : 35},
+//     { name:"dilpreet" , rollnumber:04 , marks : 55},
+// ];
+// const names=students.map((e,i,arr)=>
+// {
+//     if(e.marks < 60)
+//     {
+//         e.marks+=20;
+//     }
+//     return e.marks;
+// })
+// .filter((e)=>
+// {
+//     return e > 60;
+// })
+// .
+// reduce((acc,cur)=>
+// {
+//     return acc+=cur;
+// },0);
+// console.log(names);
 
 
 
