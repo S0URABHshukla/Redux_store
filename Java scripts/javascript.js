@@ -371,13 +371,21 @@ let students = [
 ];
 const names=students.map((e,i,arr)=>
 {
-    return e.marks < 60 ? e.marks+=e.marks+20 : e.marks;
+    if(e.marks < 60)
+    {
+        e.marks+=20;
+    }
+    return e.marks;
 })
-// .
-// reduce((acc,cur)=>
-// {
-//     return acc+=cur.marks;
-// },0);
+.filter((e)=>
+{
+    return e > 60;
+})
+.
+reduce((acc,cur)=>
+{
+    return acc+=cur;
+},0);
 console.log(names);
 
 
