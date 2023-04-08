@@ -358,6 +358,28 @@
 // });
 // console.log(names);
 
+// ----------------------------------------------------------------------
+
+// return Total marks for students with marks greater than 60 after 20 marks
+//        have been added to those who scored less than 60.
+
+let students = [
+    { name:"piyush" , rollnumber:01 , marks : 80},
+    { name:"jenny" , rollnumber:02 , marks : 69},
+    { name:"kaushal" , rollnumber:03 , marks : 35},
+    { name:"dilpreet" , rollnumber:04 , marks : 55},
+];
+const names=students.map((e,i,arr)=>
+{
+    return e.marks < 60 ? e.marks+=e.marks+20 : e.marks;
+})
+// .
+// reduce((acc,cur)=>
+// {
+//     return acc+=cur.marks;
+// },0);
+console.log(names);
+
 
 
 
