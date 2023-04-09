@@ -35,9 +35,7 @@
 // let nam="sourabh";
 // console.log(!typeof nam === "string")
 
-//-----------------------------------------------------------
-
-
+//----------------------------------------------------------------------------------------------
 
 // You are given an integer array nums. You are initially positioned at the array's first index,
 // and each element in the array represents your maximum jump length at that position.
@@ -49,71 +47,36 @@
 // Output: true
 // Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
 // Example 2:
-
-// Input: nums = [3,2,2,0,4]
+// Input: nums = [3,2,1,0,4]
 // Output: false
-// Explanation: You will always arrive at index 3 no matter what. Its maximu
+// Explanation: You will always arrive at index 3 no matter what. Its maximum
+// function canJump(nums) {
+//     let last=nums.length-1;
+//     for(let i=nums.length-2 ; i>=0 ;i--)
+//     {
+//         if(nums[i]+i >= last)
+//         {
+//             last=i;
+//         }
+//     }
+//     if(last===0) return true;
+//     return false;
+//   }  
+//   console.log(canJump([2,3,1,1,4])); // true
+//   console.log(canJump([3,2,1,0,4])); // false
+
+//----------------------------------------------------------------------------------------------
 
 // let arr =['a','b','b','c','c','c'];
-
-// const findcount=(arr)=>
+// let arr =['a','b','b','c','c','c'];
+// const results=arr.reduce((acc,cur)=>
 // {
-//     let count={};
-//     arr.forEach((e)=>
-//     {
-//         count[e]=(count[e] || 0) + 1;
-//     })
-//     return count;
-// }
-// const res=findcount(arr);
-// console.log(res)
+//     acc[cur]=acc[cur] ? acc[cur]+1 : 1;
+//     return acc;
+// },{});
+// console.log(results);
 
-// for(var i=0;i<10;i++)
-// {
-//     setTimeout(()=>
-//     {
-//         console.log(i)
-//     },1000)
-// }
-// currying
-// function product(x)
-// {
-//     return function(y)
-//     {
-//         return x*y;
-//     }
-// }
-// console.log(product(4)(5));
-
-// function chips() {
-//     console.log('sync: chips'); 
-//   }  
-//   function pizza() {
-//     setTimeout(()=>{
-//       console.log('async: pizza');
-//     },0);
-//   }
-  
-//   function main() {
-//     chips();
-//     pizza();
-//     chips();
-//     chips();
-//     chips();
-//   }  
-//   main();
-
-// function sayGoodbye() {
-//     console.log("Good bye! ", this);
-//   }
-  
-//   function sayHello() {
-//     console.log("Helloo! ", this);
-//     sayGoodbye();
-//   }
-  
-//   sayHello();
-
+//----------------------------------------------------------------------------------------------
 
 // let arr=['a','b','c','d','e','f'];
 // let s=arr.indexOf('c');
@@ -123,6 +86,8 @@
 // let newArr=arr.splice(s,end);
 // let updateArr=newArr.concat(arr)
 // console.log(updateArr);
+
+//----------------------------------------------------------------------------------------------
 
 // let developers_array = [
 //       {
@@ -148,66 +113,14 @@
     //   BE: ["Jane", "James"]
     //   FE: ["John"]
     // }
-//   let obj =  {
-//         BE : developers_array.filter((ele)=> ele.dept == "BE").map((ele)=>ele.first),
-//         FE : developers_array.filter((ele)=> ele.dept == "FE").map((ele)=>ele.first)
-//     }
-// console.log(obj);
+    // const results=developers_array.reduce((acc,cur)=>
+    // {
+    //     acc[cur.dept]=acc[cur.dept] ? [...acc[cur.dept],cur.first] :[cur.first];
+    //     return acc;
+    // },{});
+    //     console.log(results);
 
-// let prateekMarksData = {
-//   name: "Prateek",
-//   subject1: "Javascript",
-//   subject2: "HTML",
-//   subject3: "CSS",
-//   subject4: null,
-//   subject5: null,
-//   marks1: 90, 
-//   marks2: 81,
-//   marks3: 80,
-//   marks4: null,
-//   marks5: null,
-// }
-
-// let nrupulMarksData = {
-//   name: "Nrupul",
-//   subject1: "Java",
-//   subject2: "Pyton",
-//   subject3: null,
-//   subject4: null,
-//   subject5: null,
-//   marks1: 95, 
-//   marks2: 85,
-//   marks3: null,
-//   marks4: null,
-//   marks5: null,
-// }
-
-// let allStudentsMarksData = [prateekMarksData, nrupulMarksData];
-
-// let massagedData = allStudentsMarksData.reduce((acc, item)=>{
-//   let object = {};
-
-//   object.name = item.name;
-//   let arr = [];
-  
-//   for(let i = 1; i < 6; i++) {
-//       if(item[`subject${i}`]){
-//         object.marks = object.marks ? [...object.marks, {  subject: item[`subject${i}`], score : item[`marks${i}`]   } ] : [ { subject: item[`subject${i}`], score : item[`marks${i}`]   }  ];
-
-//         console.log({ subject: item[`subject${i}`], score : item[`marks${i}`]   })
-        
-//       }
-//   }
-
-//   acc.push(object)
-  
-//   return acc
-// },[])
-
-
-
-
-// console.log(massagedData);
+ //----------------------------------------------------------------------------------------------   
 
 // const obj1={
 //     name:"sourabh",
@@ -220,20 +133,17 @@
 
 // console.log({...obj1,...obj2})
 
-// const arr1=[1,2,3,4,5];
-// const arr2=[3,4,5,6,7];
-
-// console.log([...arr1,...arr2]);
+ //----------------------------------------------------------------------------------------------   
 
 // const obj1={
 //     name:"sourabh",
 //     sname:"shukla"
 // }
-
 // Object.seal(obj1);
 // obj1.name="nitin"
-
 // console.log(obj1)
+
+//----------------------------------------------------------------------------------------------
 
 // for(let i=0;i<5;i++) 
 // {
@@ -242,12 +152,17 @@
 //         console.log(i);
 //     },0)
 // }
+
+//----------------------------------------------------------------------------------------------
+
 // let obj={
 //     name:"nitin",
 //     sname:"deswal"
 // }
 // let sname='shukla';
 // console.log(obj["sname"], obj.sname, obj[sname])
+
+//----------------------------------------------------------------------------------------------
 
 // "use strict"
 // var x=100;
@@ -259,35 +174,9 @@
 // test()
 // console.log(x,i)
 
-// const result=[[0,1],[2,3]].reduce((acc,cur)=>
-// {
-//     return acc.concat(cur);
-// },[1,2]);
-// console.log(result);
-
-// let set=new Set();
-// set.add(1);
-// set.add('anup');
-// set.add({name:"anup"});
-
-// for(let item of set)
-// {
-//     console.log(item+2);
-// }
-
-// const user={name:"anup", age:21};
-// const obj={admin:true,...user}
-
-// console.log(obj)
-
-// const person={name:"anup"};
-
-// Object.defineProperty(person,'age',{value:21})
-// console.log(person)
-// console.log(Object.keys(person))
+//----------------------------------------------------------------------------------------------
 
 // const arr=[1,2,3,4,5];
-
 // const binary=(x)=>
 // {
 //     return x.toString(2);
@@ -301,16 +190,7 @@
 // })
 // console.log(arr);
 
-// const arr=[1,2,3,4,5];
-
-// const result=arr.reduce((acc,curr)=>
-// {
-//     return acc=acc+curr;
-// },0);
-// console.log(result)
-// console.log(arr)
-
-// ----------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------
 
 //return only names of students who scored more than 60
 
